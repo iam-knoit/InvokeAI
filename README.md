@@ -93,6 +93,7 @@ How you will connect to the InvokeAI web interface.
     *   Enter the token in the `ngrok_token` field.
 *   `NGROK_APT`: An alternative NGROK setup that runs as a Linux service. Also requires an `ngrok_token`.
 *   `Localtunnel`: Slower and sometimes less reliable than NGROK, but requires no setup or token.
+*   `Cloudflare`: Uses Cloudflare Quick Tunnels. Usually stable, requires no setup or token.
 
 ### Instance Selector
 Allows you to have multiple, separate InvokeAI instances.
@@ -126,10 +127,11 @@ This section is based on the FAQ within the Colab notebook.
 *   **It is taking a while to even start loading.**
     *   If it's a new instance or you're changing models, the model needs to be loaded. If using "Google Drive," the model is downloaded to the runtime first, which can take time, especially for large models (XL: 5-10 mins, FLUX: 20+ mins).
 
-*   **No link is given to me for Localtunnel/NGROK?**
+*   **No link is given to me for Localtunnel/NGROK/Cloudflare?**
     *   Check the status of the services:
         *   Localtunnel: [https://downforeveryoneorjustme.com/localtunnel.me](https://downforeveryoneorjustme.com/localtunnel.me)
         *   NGROK: [https://status.ngrok.com](https://status.ngrok.com)
+        *   Cloudflare: [https://www.cloudflarestatus.com/](https://www.cloudflarestatus.com/)
 
 *   **I get an error "You have recently exceeded an allowance, most recently at (Time)".**
     *   This usually means you've hit a Google Colab usage limit, often from frequent starting/stopping of instances. It might not affect functionality. If it does, you may need to wait (e.g., 1 hour) for soft allowances to reset.
