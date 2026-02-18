@@ -112,6 +112,7 @@ Specify the version of InvokeAI to install.
 ### Memory Management
 InvokeAI offers two methods for managing models in VRAM.
 *   `CUDA` (Recommended for InvokeAI 5.7.2+): Typically outperforms `pytorch`, reducing peak VRAM usage and potentially improving generation speeds. Not suitable for CPU mode.
+    *   If CUDA is selected but no GPU is available at runtime, the notebook now automatically falls back to `pytorch` to avoid startup failures.
 *   `pytorch`: The alternative memory allocator. Use this for older InvokeAI versions or if you intend to run in CPU mode (not generally recommended on Colab).
 
 ---
